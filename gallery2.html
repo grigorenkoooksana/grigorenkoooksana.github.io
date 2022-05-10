@@ -1,0 +1,33 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+ <meta charset="UTF-8"> 
+ <title>Знайомство з JS</title> 
+ 
+<script>
+var photoCount = 6;
+var currentPhotoIndex = 1;
+function showNextPhoto() {
+currentPhotoIndex++;
+if (currentPhotoIndex > photoCount) currentPhotoIndex = 1;
+var elem = document.getElementById("currentPhoto");
+elem.src = "images/photo" + currentPhotoIndex + ".jpg";
+}
+function showPreviousPhoto() {
+pastPhotoIndex++;
+if (pastPhotoIndex > photoCount) pastPhotoIndex = 1;
+var elem = document.getElementById("pastPhoto");
+elem.src = "images/photo" + pastPhotoIndex + ".jpg";
+}
+</script> 
+</head> 
+
+<body >  
+<div> 
+<img id="currentPhoto" src="images/photo1.jpg" /> 
+
+</div> 
+<button onclick="showNextPhoto()">Наступна</button>
+<button onclick="showPreviousPhoto()">Попередня </button>
+</body> 
+</html>
